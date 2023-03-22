@@ -1,0 +1,707 @@
+Last login: Wed Mar 22 11:05:07 on ttys002
+➜  ~ cd Documents/PosteMCF 
+➜  PosteMCF cd Formation/GitTraining2 
+➜  GitTraining2 git:(b433a9a) ✗ ls
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(b433a9a) ✗ code Deolinda.txt 
+➜  GitTraining2 git:(b433a9a) ✗ code Deolinda.txt
+➜  GitTraining2 git:(b433a9a) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   CommandLines1.tex
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Deolinda.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining2 git:(b433a9a) ✗ git add Deolinda.txt                     
+➜  GitTraining2 git:(b433a9a) ✗ git commit
+[detached HEAD ec518bf] Some information about Deolinda
+ 1 file changed, 25 insertions(+)
+ create mode 100644 Deolinda.txt
+➜  GitTraining2 git:(ec518bf) ✗ ls           
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(ec518bf) ✗ git show
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  GitTraining2 git:(ec518bf) ✗ git log
+➜  GitTraining2 git:(ec518bf) ✗ 
+➜  GitTraining2 git:(ec518bf) ✗ git show ec518bf1a627bb626787d2fa03e5d9910e26d1c7
+➜  GitTraining2 git:(ec518bf) ✗ 
+➜  GitTraining2 git:(ec518bf) ✗ ls
+CommandLines1.tex Deolinda.txt      Links.tex         file1.txt         file2.txt         file3.txt
+➜  GitTraining2 git:(ec518bf) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   CommandLines1.tex
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining2 git:(ec518bf) ✗ git add CommandLines1.tex 
+➜  GitTraining2 git:(ec518bf) ✗ git commit
+[detached HEAD 56895d3] Updates to command lines
+ 1 file changed, 85 insertions(+), 1 deletion(-)
+➜  GitTraining2 git:(56895d3) ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ google-chrome --allow-file-access-from-files index.html
+zsh: command not found: google-chrome
+➜  GitTraining2 git:(56895d3) ✗ open -a "Google Chrome" index.html --args --allow-file-access-from-files
+The file /Users/maylis/Documents/PosteMCF/Formation/GitTraining2/index.html does not exist.
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ cd article 
+➜  article git:(56895d3) ✗ open -a "Google Chrome" index.html --args --allow-file-access-from-files
+➜  article git:(56895d3) ✗ ls
+articles   css        index.html js
+➜  article git:(56895d3) ✗ cd ../
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ git log
+➜  GitTraining2 git:(56895d3) ✗ git status
+HEAD detached from 1f0dfc9
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	article/
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ cd article 
+➜  article git:(56895d3) ✗ ls
+articles   css        index.html js
+➜  article git:(56895d3) ✗ git status
+HEAD detached from 1f0dfc9
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  article git:(56895d3) ✗ cd ../
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ cd article 
+➜  article git:(56895d3) ✗ ls
+articles   css        index.html js
+➜  article git:(56895d3) ✗ git add . 
+➜  article git:(56895d3) ✗ git status
+HEAD detached from 1f0dfc9
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   articles/example.md
+	new file:   css/style.css
+	new file:   index.html
+	new file:   js/jquery-3.3.1.min.js
+	new file:   js/markdown.js
+	new file:   js/showdown-figure.min.js
+	new file:   js/showdown-figure.min.js.map
+	new file:   js/showdown.min.js
+	new file:   js/showdown.min.js.map
+
+➜  article git:(56895d3) ✗ git commit
+[detached HEAD 72bc6ae] Article directory added
+ 9 files changed, 395 insertions(+)
+ create mode 100644 article/articles/example.md
+ create mode 100644 article/css/style.css
+ create mode 100644 article/index.html
+ create mode 100644 article/js/jquery-3.3.1.min.js
+ create mode 100644 article/js/markdown.js
+ create mode 100644 article/js/showdown-figure.min.js
+ create mode 100644 article/js/showdown-figure.min.js.map
+ create mode 100644 article/js/showdown.min.js
+ create mode 100755 article/js/showdown.min.js.map
+➜  article git:(72bc6ae) git status
+HEAD detached from 1f0dfc9
+nothing to commit, working tree clean
+➜  article git:(72bc6ae) git log
+➜  article git:(72bc6ae) ls
+articles   css        index.html js
+➜  article git:(72bc6ae) code CommandLines2.tex
+➜  article git:(72bc6ae) cd ../
+➜  GitTraining2 git:(72bc6ae) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(72bc6ae) ✗ cd ../
+➜  GitTraining ls
+GitTraining2 GitTraining3
+➜  GitTraining cd GitTraining3 
+➜  GitTraining3 git:(72bc6ae) ✗ git init GitTraining3
+Initialized empty Git repository in /Users/maylis/Documents/PosteMCF/Formation/GitTraining/GitTraining3/GitTraining3/.git/
+➜  GitTraining3 git:(72bc6ae) ✗ ls
+CommandLines1.tex Deolinda.txt      GitTraining3      Links.tex         article
+➜  GitTraining3 git:(72bc6ae) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    file1.txt
+	deleted:    file2.txt
+	deleted:    file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining3 git:(72bc6ae) ✗ git add *
+error: 'GitTraining3/' does not have a commit checked out
+fatal: adding files failed
+➜  GitTraining3 git:(72bc6ae) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    file1.txt
+	deleted:    file2.txt
+	deleted:    file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining3 git:(72bc6ae) ✗ ls
+CommandLines1.tex Deolinda.txt      GitTraining3      Links.tex         article
+➜  GitTraining3 git:(72bc6ae) ✗ pwd
+/Users/maylis/Documents/PosteMCF/Formation/GitTraining/GitTraining3
+➜  GitTraining3 git:(72bc6ae) ✗ git checkout main
+Warning: you are leaving 4 commits behind, not connected to
+any of your branches:
+
+  72bc6ae Article directory added
+  56895d3 Updates to command lines
+  ec518bf Some information about Deolinda
+  b433a9a add gitignore file
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 72bc6ae
+
+Switched to branch 'main'
+➜  GitTraining3 git:(main) ls
+GitTraining3 article
+➜  GitTraining3 git:(main) cd ../
+➜  GitTraining ls
+GitTraining2 GitTraining3
+➜  GitTraining cd GitTraining3 
+➜  GitTraining3 git:(main) ls
+GitTraining3 article
+➜  GitTraining3 git:(main) cd GitTraining3 
+➜  GitTraining3 git:(master) ls
+➜  GitTraining3 git:(master) cd ../
+➜  GitTraining3 git:(main) ls
+GitTraining3 article
+➜  GitTraining3 git:(main) ls        
+GitTraining3 article
+➜  GitTraining3 git:(main) ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(main) ✗ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	CommandLines1.tex
+	Links.tex
+	article/
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  GitTraining3 git:(main) ✗ git add *
+➜  GitTraining3 git:(main) ✗ ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(main) ✗ git commit
+[main 358ba4a] Start main again
+ 12 files changed, 865 insertions(+)
+ create mode 100644 CommandLines1.tex
+ create mode 100644 Links.tex
+ create mode 100644 article/CommandLines2.tex
+ create mode 100644 article/articles/example.md
+ create mode 100644 article/css/style.css
+ create mode 100644 article/index.html
+ create mode 100644 article/js/jquery-3.3.1.min.js
+ create mode 100644 article/js/markdown.js
+ create mode 100644 article/js/showdown-figure.min.js
+ create mode 100644 article/js/showdown-figure.min.js.map
+ create mode 100644 article/js/showdown.min.js
+ create mode 100755 article/js/showdown.min.js.map
+➜  GitTraining3 git:(main) ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(main) git status
+On branch main
+nothing to commit, working tree clean
+➜  GitTraining3 git:(main) ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(main) git branch myarticle
+➜  GitTraining3 git:(main) git branch
+➜  GitTraining3 git:(main) git checkout myarticle 
+Switched to branch 'myarticle'
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(myarticle) cp ../GitTraining2/Deolinda.txt ./
+➜  GitTraining3 git:(myarticle) ✗ ls
+CommandLines1.tex Deolinda.txt      Links.tex         article
+➜  GitTraining3 git:(myarticle) ✗ git add Deolinda.txt 
+➜  GitTraining3 git:(myarticle) ✗ git status
+On branch myarticle
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Deolinda.txt
+
+➜  GitTraining3 git:(myarticle) ✗ git commit
+[myarticle 08a29d9] Add Deolinda review
+ 1 file changed, 25 insertions(+)
+ create mode 100644 Deolinda.txt
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex Deolinda.txt      Links.tex         article
+➜  GitTraining3 git:(myarticle) ls                            
+CommandLines1.tex Deolinda.txt      Links.tex         article
+➜  GitTraining3 git:(myarticle) cd article 
+➜  article git:(myarticle) ls
+CommandLines2.tex articles          css               index.html        js
+➜  article git:(myarticle) cd ../
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex Deolinda.txt      Links.tex         article
+➜  GitTraining3 git:(myarticle) mv Deolinda.txt article 
+➜  GitTraining3 git:(myarticle) ✗ git status
+On branch myarticle
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    Deolinda.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	article/Deolinda.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining3 git:(myarticle) ✗ git add * 
+➜  GitTraining3 git:(myarticle) ✗ git status
+On branch myarticle
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   article/Deolinda.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    Deolinda.txt
+
+➜  GitTraining3 git:(myarticle) ✗ git commit
+[myarticle 91dec73] rectify error
+ 1 file changed, 25 insertions(+)
+ create mode 100644 article/Deolinda.txt
+➜  GitTraining3 git:(myarticle) ✗ ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(myarticle) ✗ cd article 
+➜  article git:(myarticle) ✗ git status
+On branch myarticle
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../Deolinda.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex articles          index.html
+Deolinda.txt      css               js
+➜  article git:(myarticle) ✗ cd ../
+➜  GitTraining3 git:(myarticle) ✗ ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(myarticle) ✗ cd article 
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex articles          index.html
+Deolinda.txt      css               js
+➜  article git:(myarticle) ✗ git mv Deolinda.txt articles/example.md 
+fatal: destination exists, source=article/Deolinda.txt, destination=article/articles/example.md
+➜  article git:(myarticle) ✗ ls 
+CommandLines2.tex articles          index.html
+Deolinda.txt      css               js
+➜  article git:(myarticle) ✗ cd articles 
+➜  articles git:(myarticle) ✗ ls
+example.md
+➜  articles git:(myarticle) ✗ git rm example.md 
+rm 'article/articles/example.md'
+➜  articles git status
+fatal: Unable to read current working directory: No such file or directory
+➜  articles ls
+➜  articles cd ../
+➜  article git:(myarticle) ✗ git status
+On branch myarticle
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    articles/example.md
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../Deolinda.txt
+
+➜  article git:(myarticle) ✗ cd ../
+➜  GitTraining3 git:(myarticle) ✗ ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(myarticle) ✗ git commit
+[myarticle d65483a] hum hum
+ 1 file changed, 40 deletions(-)
+ delete mode 100644 article/articles/example.md
+➜  GitTraining3 git:(myarticle) ✗ cd article 
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      css               index.html        js
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      css               index.html        js
+➜  article git:(myarticle) ✗ cd ../
+➜  GitTraining3 git:(myarticle) ✗ ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(myarticle) ✗ cd article 
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      css               index.html        js
+➜  article git:(myarticle) ✗ git log
+➜  article git:(myarticle) ✗ git checkout 08a29d9f428da458841372ab2038192f3de7b353
+D	Deolinda.txt
+Note: switching to '08a29d9f428da458841372ab2038192f3de7b353'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 08a29d9 Add Deolinda review
+➜  article git:(08a29d9) ✗ ls
+CommandLines2.tex articles          css               index.html        js
+➜  article git:(08a29d9) ✗ cd articles 
+➜  articles git:(08a29d9) ✗ ls
+example.md
+➜  articles git:(08a29d9) ✗ cd ../
+➜  article git:(08a29d9) ✗ cd ../
+➜  GitTraining3 git:(08a29d9) ✗ ls
+CommandLines1.tex Links.tex         article
+➜  GitTraining3 git:(08a29d9) ✗ cd article 
+➜  article git:(08a29d9) ✗ ls
+CommandLines2.tex articles          css               index.html        js
+➜  article git:(08a29d9) ✗ git checkout myarticle
+D	Deolinda.txt
+Previous HEAD position was 08a29d9 Add Deolinda review
+Switched to branch 'myarticle'
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      css               index.html        js
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ git status
+On branch myarticle
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../Deolinda.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	articles/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  article git:(myarticle) ✗ git add articles/
+➜  article git:(myarticle) ✗ git commit
+[myarticle 8005aa5] add artciles
+ 1 file changed, 40 insertions(+)
+ create mode 100644 article/articles/example.md
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ cd articles 
+➜  articles git:(myarticle) ✗ ls
+example.md
+➜  articles git:(myarticle) ✗ ls
+example.md
+➜  articles git:(myarticle) ✗ cd ../
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ google-chrome --allow-file-access-from-files index.html
+zsh: command not found: google-chrome
+➜  article git:(myarticle) ✗ open -a "Google Chrome" index.html --args --allow-file-access-from-files
+➜  article git:(myarticle) ✗ ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ git status
+On branch myarticle
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../Deolinda.txt
+	modified:   articles/example.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  article git:(myarticle) ✗ ls      
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ git rm ../Deolinda.txt
+rm 'Deolinda.txt'
+➜  article git:(myarticle) ✗ git add articles/example.md 
+➜  article git:(myarticle) ✗ git commit
+[myarticle f6bbdbf] Add Deolinda on webpage in articles/
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename Deolinda.txt => article/articles/example.md (100%)
+➜  article git:(myarticle) git status
+On branch myarticle
+nothing to commit, working tree clean
+➜  article git:(myarticle) ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ cd ../
+➜  GitTraining3 git:(myarticle) ✗ ls
+CommandLines1.tex    ExampleOfMarkdown.md Links.tex            article
+➜  GitTraining3 git:(myarticle) ✗ git status
+On branch myarticle
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	ExampleOfMarkdown.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  GitTraining3 git:(myarticle) ✗ git add ExampleOfMarkdown.md 
+➜  GitTraining3 git:(myarticle) ✗ git commit
+[myarticle b8b0e3d] add examples of markdown
+ 1 file changed, 29 insertions(+)
+ create mode 100644 ExampleOfMarkdown.md
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex    ExampleOfMarkdown.md Links.tex            article
+➜  GitTraining3 git:(myarticle) cd article 
+➜  article git:(myarticle) ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) cd articles 
+➜  articles git:(myarticle) ls
+example.md
+➜  articles git:(myarticle) code example.md 
+➜  articles git:(myarticle) cd ../
+➜  article git:(myarticle) ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) cd ../
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex    ExampleOfMarkdown.md Links.tex            article
+➜  GitTraining3 git:(myarticle) code ExampleOfMarkdown.md 
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex    ExampleOfMarkdown.md Links.tex            article
+➜  GitTraining3 git:(myarticle) ✗ git status
+On branch myarticle
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   article/articles/example.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining3 git:(myarticle) ✗ git add *
+➜  GitTraining3 git:(myarticle) ✗ git commit
+[myarticle 6b5783a] Markdown in article
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+➜  GitTraining3 git:(myarticle) ls
+CommandLines1.tex    ExampleOfMarkdown.md Links.tex            article
+➜  GitTraining3 git:(myarticle) cd article 
+➜  article git:(myarticle) ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) cd articles 
+➜  articles git:(myarticle) ls
+example.md
+➜  articles git:(myarticle) git mv example.md Deolinda.md
+➜  articles git:(myarticle) ✗ ls
+Deolinda.md
+➜  articles git:(myarticle) ✗ git add * 
+➜  articles git:(myarticle) ✗ git commit
+[myarticle c1c2829] change name
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename article/articles/{example.md => Deolinda.md} (100%)
+➜  articles git:(myarticle) ls
+Deolinda.md
+➜  articles git:(myarticle) cd ../
+➜  article git:(myarticle) ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) git status
+On branch myarticle
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  article git:(myarticle) ✗ ls 
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) ✗ git add index.html 
+➜  article git:(myarticle) ✗ git commit
+[myarticle 48d4f8d] Change file name in index
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+➜  article git:(myarticle) ls
+CommandLines2.tex Deolinda.txt      articles          css               index.html        js
+➜  article git:(myarticle) git status 
+On branch myarticle
+nothing to commit, working tree clean
+➜  article git:(myarticle) git checkout main
+Switched to branch 'main'
+➜  article git:(main) ls
+CommandLines2.tex articles          css               index.html        js
+➜  article git:(main) code README.md 
+➜  article git:(main) ls
+CommandLines2.tex README.md         articles          css               index.html        js
+➜  article git:(main) ✗ git add README.md 
+➜  article git:(main) ✗ git commit
+[main acff434] Add readme file
+ 1 file changed, 3 insertions(+)
+ create mode 100644 article/README.md
+➜  article git:(main) ls
+CommandLines2.tex README.md         articles          css               index.html        js
+➜  article git:(main) ls
+CommandLines2.tex README.md         articles          css               index.html        js
+➜  article git:(main) ✗ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  article git:(main) ✗ git add README.md 
+➜  article git:(main) ✗ git commit --ammend
+error: unknown option `ammend'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+➜  article git:(main) ✗ git commit --ammend
+error: unknown option `ammend'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+➜  article git:(main) ✗ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+➜  article git:(main) ✗ git commit
+[main 28f59f6] Readme
+ 1 file changed, 3 insertions(+)
+➜  article git:(main) ls
+CommandLines2.tex README.md         articles          css               index.html        js
+➜  article git:(main) git merge myarticle
+Removing article/articles/example.md
+Merge made by the 'recursive' strategy.
+ ExampleOfMarkdown.md         | 29 +++++++++++++++++++++++++++++
+ article/Deolinda.txt         | 25 +++++++++++++++++++++++++
+ article/articles/Deolinda.md | 40 ++++++++++++++++++++++++++++++++++++++++
+ article/articles/example.md  | 40 ----------------------------------------
+ article/index.html           |  2 +-
+ 5 files changed, 95 insertions(+), 41 deletions(-)
+ create mode 100644 ExampleOfMarkdown.md
+ create mode 100644 article/Deolinda.txt
+ create mode 100644 article/articles/Deolinda.md
+ delete mode 100644 article/articles/example.md
+➜  article git:(main) ls                 
+CommandLines2.tex README.md         css               js
+Deolinda.txt      articles          index.html
+➜  article git:(main) git branch -d myarticle
+Deleted branch myarticle (was 48d4f8d).
+➜  article git:(main) git status
+On branch main
+nothing to commit, working tree clean
+➜  article git:(main) git log --all --graph --decorate
+➜  article git:(main) 
