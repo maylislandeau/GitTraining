@@ -1,6 +1,21 @@
-Deolinda is an acoustic Portuguese "neofado" group, whose music
+# Deolinda
+
+## Maylis Landeau 
+
+### Source: [Wikipedia](https://en.wikipedia.org/wiki/Deolinda)
+
+
+
+
+
+**Deolinda** is an acoustic Portuguese "neofado" group, whose music
 often deals with social and political commentary. Founded in 2006,
 their first album was released in 2008, which went double platinum. 
+
+![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Deolinda_Oeiras_1.JPG/1920px-Deolinda_Oeiras_1.JPG)
+
+
+
 
 Although strongly associated with fado (lit. fate), a usually dark 
 and somber form of Portuguese music, they do not play it, at least 
