@@ -1,0 +1,324 @@
+Last login: Wed Mar 22 11:05:00 on ttys001
+➜  ~ cd Documents/PosteMCF 
+➜  PosteMCF ls
+Comptes                Formation              MailBox
+Devis_mirroir.pdf      Funding                PapierAdm
+EcolesEte              Houches.tex            Recherche
+EnArrivant.tex         Jobs                   RecrutementsChercheurs
+Enseignement           LetterReferences
+➜  PosteMCF cd Formation/GitTraining2 
+➜  GitTraining2 ls
+file1.txt file2.txt file3.txt
+➜  GitTraining2 pwd
+/Users/maylis/Documents/PosteMCF/Formation/GitTraining2
+➜  GitTraining2 git init /Users/maylis/Documents/PosteMCF/Formation/GitTraining2 
+Initialized empty Git repository in /Users/maylis/Documents/PosteMCF/Formation/GitTraining2/.git/
+➜  GitTraining2 git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file1.txt
+	file2.txt
+	file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  GitTraining2 git:(master) ✗ git add file1.txt file2.txt file3.txt
+➜  GitTraining2 git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file1.txt
+	new file:   file2.txt
+	new file:   file3.txt
+
+➜  GitTraining2 git:(master) ✗ git commit                           
+Aborting commit due to empty commit message.
+➜  GitTraining2 git:(master) ✗ git commit
+[master (root-commit) 49bffba] Initial commit
+ 3 files changed, 130 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+➜  GitTraining2 git:(master) git status
+On branch master
+nothing to commit, working tree clean
+➜  GitTraining2 git:(master) git log
+
+➜  GitTraining2 git:(master) git log
+➜  GitTraining2 git:(master) git branch -m main             
+➜  GitTraining2 git:(main) vi file1.txt 
+➜  GitTraining2 git:(main) vi file1.txt
+➜  GitTraining2 git:(main) ✗ ls
+file1.txt file2.txt file3.txt
+➜  GitTraining2 git:(main) ✗ vi file1.txt
+➜  GitTraining2 git:(main) ✗ git diff    
+➜  GitTraining2 git:(main) ✗ git add file1.txt file2.txt file3.txt
+➜  GitTraining2 git:(main) ✗ git commit                           
+Aborting commit due to empty commit message.
+➜  GitTraining2 git:(main) ✗ git log
+➜  GitTraining2 git:(main) ✗ git commit
+Aborting commit due to empty commit message.
+➜  GitTraining2 git:(main) ✗ ls
+file1.txt file2.txt file3.txt
+➜  GitTraining2 git:(main) ✗ git commit
+[main a3b35a7] Added personal comment
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+➜  GitTraining2 git:(main) git log
+➜  GitTraining2 git:(main) git log
+➜  GitTraining2 git:(main) git checkout 49bffba6b89e50d473b3ec142169238f5539a893
+Note: switching to '49bffba6b89e50d473b3ec142169238f5539a893'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 49bffba Initial commit
+➜  GitTraining2 git:(49bffba) code file1.txt                                    
+zsh: command not found: code
+➜  GitTraining2 git:(49bffba) git log
+➜  GitTraining2 git:(49bffba) git log --all
+➜  GitTraining2 git:(49bffba) git status
+HEAD detached at 49bffba
+nothing to commit, working tree clean
+➜  GitTraining2 git:(49bffba) git checkout main 
+Previous HEAD position was 49bffba Initial commit
+Switched to branch 'main'
+➜  GitTraining2 git:(main) git reset --hard 49bffba6b89e50d473b3ec142169238f5539a893
+HEAD is now at 49bffba Initial commit
+➜  GitTraining2 git:(main) ✗ git log --all    
+➜  GitTraining2 git:(main) ✗ vi file1.txt                         
+➜  GitTraining2 git:(main) ✗ git add *
+➜  GitTraining2 git:(main) ✗ git commit
+[main 1f0dfc9] Some changes on file 1
+ 2 files changed, 6 insertions(+)
+ create mode 100644 Links.tex
+➜  GitTraining2 git:(main) git log
+➜  GitTraining2 git:(main) 
+➜  GitTraining2 git:(main) git rm 
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+➜  GitTraining2 git:(main) git rm *
+rm 'Links.tex'
+rm 'file1.txt'
+rm 'file2.txt'
+rm 'file3.txt'
+➜  GitTraining2 git:(main) ✗ ls
+➜  GitTraining2 git:(main) ✗ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    Links.tex
+	deleted:    file1.txt
+	deleted:    file2.txt
+	deleted:    file3.txt
+
+➜  GitTraining2 git:(main) ✗ git commit
+[main 671d788] Removing files
+ 4 files changed, 136 deletions(-)
+ delete mode 100644 Links.tex
+ delete mode 100644 file1.txt
+ delete mode 100644 file2.txt
+ delete mode 100644 file3.txt
+➜  GitTraining2 git:(main) ls
+CommandLines.tex
+➜  GitTraining2 git:(main) ✗ git log
+➜  GitTraining2 git:(main) ✗ git checkout 49bffba6b89e50d473b3ec142169238f5539a893
+Note: switching to '49bffba6b89e50d473b3ec142169238f5539a893'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 49bffba Initial commit
+➜  GitTraining2 git:(49bffba) ✗ ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(49bffba) ✗ ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(49bffba) ✗ ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(49bffba) ✗ git add *                       
+➜  GitTraining2 git:(49bffba) ✗ ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(49bffba) ✗ git commit
+[detached HEAD dc783e1] Adding Comand lines
+ 1 file changed, 156 insertions(+)
+ create mode 100644 CommandLines.tex
+➜  GitTraining2 git:(dc783e1) ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(dc783e1) vi CommandLines.tex 
+➜  GitTraining2 git:(dc783e1) vi file1.txt 
+➜  GitTraining2 git:(dc783e1) ✗ ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(dc783e1) ✗ git add *
+➜  GitTraining2 git:(dc783e1) ✗ git commit
+[detached HEAD b7222e0] changes to file1
+ 1 file changed, 2 insertions(+)
+➜  GitTraining2 git:(b7222e0) ls
+CommandLines.tex file1.txt        file2.txt        file3.txt
+➜  GitTraining2 git:(b7222e0) vi file1.txt       
+➜  GitTraining2 git:(b7222e0) git status
+HEAD detached from 49bffba
+nothing to commit, working tree clean
+➜  GitTraining2 git:(b7222e0) git checkout main
+Warning: you are leaving 2 commits behind, not connected to
+any of your branches:
+
+  b7222e0 changes to file1
+  dc783e1 Adding Comand lines
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> b7222e0
+
+Switched to branch 'main'
+➜  GitTraining2 git:(main) git log
+➜  GitTraining2 git:(main) ls
+➜  GitTraining2 git:(main) git log
+➜  GitTraining2 git:(main) 
+➜  GitTraining2 git:(main) git checkout 1f0dfc9aeabf01680e643e84a805f0bec3687b17
+Note: switching to '1f0dfc9aeabf01680e643e84a805f0bec3687b17'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1f0dfc9 Some changes on file 1
+➜  GitTraining2 git:(1f0dfc9) ls
+Links.tex file1.txt file2.txt file3.txt
+➜  GitTraining2 git:(1f0dfc9) ls
+Links.tex file1.txt file2.txt file3.txt
+➜  GitTraining2 git:(1f0dfc9) git status
+HEAD detached at 1f0dfc9
+nothing to commit, working tree clean
+➜  GitTraining2 git:(1f0dfc9) ls
+CommandLines1.tex file1.txt         file3.txt
+Links.tex         file2.txt
+➜  GitTraining2 git:(1f0dfc9) ✗ vi .gitignore
+➜  GitTraining2 git:(1f0dfc9) ✗ ls
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(1f0dfc9) ✗ ls -a
+.                 .gitignore        Links.tex         file3.txt
+..                CommandLines1.tex file1.txt
+.git              Deolinda.txt      file2.txt
+➜  GitTraining2 git:(1f0dfc9) ✗ vi .gitignore
+➜  GitTraining2 git:(1f0dfc9) ✗ git status
+HEAD detached at 1f0dfc9
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	CommandLines1.tex
+	Deolinda.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  GitTraining2 git:(1f0dfc9) ✗ git add .gitignore 
+➜  GitTraining2 git:(1f0dfc9) ✗ git add CommandLines1.tex 
+➜  GitTraining2 git:(1f0dfc9) ✗ git commit
+[detached HEAD b433a9a] add gitignore file
+ 2 files changed, 242 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 CommandLines1.tex
+➜  GitTraining2 git:(b433a9a) ✗ ls
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(b433a9a) ✗ 
+
+
+
+Last login: Wed Mar 22 11:05:07 on ttys002
+➜  ~ cd Documents/PosteMCF 
+➜  PosteMCF cd Formation/GitTraining2 
+➜  GitTraining2 git:(b433a9a) ✗ ls
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(b433a9a) ✗ code Deolinda.txt 
+➜  GitTraining2 git:(b433a9a) ✗ code Deolinda.txt
+➜  GitTraining2 git:(b433a9a) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   CommandLines1.tex
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Deolinda.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining2 git:(b433a9a) ✗ git add Deolinda.txt                     
+➜  GitTraining2 git:(b433a9a) ✗ git commit
+[detached HEAD ec518bf] Some information about Deolinda
+ 1 file changed, 25 insertions(+)
+ create mode 100644 Deolinda.txt
+➜  GitTraining2 git:(ec518bf) ✗ ls           
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(ec518bf) ✗ git show
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  GitTraining2 git:(ec518bf) ✗ git log
+➜  GitTraining2 git:(ec518bf) ✗ 
+➜  GitTraining2 git:(ec518bf) ✗ git show ec518bf1a627bb626787d2fa03e5d9910e26d1c7
+➜  GitTraining2 git:(ec518bf) ✗ 
+➜  GitTraining2 git:(ec518bf) ✗ 
+
+

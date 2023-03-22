@@ -1,0 +1,142 @@
+Last login: Wed Mar 22 11:05:07 on ttys002
+➜  ~ cd Documents/PosteMCF 
+➜  PosteMCF cd Formation/GitTraining2 
+➜  GitTraining2 git:(b433a9a) ✗ ls
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(b433a9a) ✗ code Deolinda.txt 
+➜  GitTraining2 git:(b433a9a) ✗ code Deolinda.txt
+➜  GitTraining2 git:(b433a9a) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   CommandLines1.tex
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Deolinda.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining2 git:(b433a9a) ✗ git add Deolinda.txt                     
+➜  GitTraining2 git:(b433a9a) ✗ git commit
+[detached HEAD ec518bf] Some information about Deolinda
+ 1 file changed, 25 insertions(+)
+ create mode 100644 Deolinda.txt
+➜  GitTraining2 git:(ec518bf) ✗ ls           
+CommandLines1.tex Links.tex         file2.txt
+Deolinda.txt      file1.txt         file3.txt
+➜  GitTraining2 git:(ec518bf) ✗ git show
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+➜  GitTraining2 git:(ec518bf) ✗ git log
+➜  GitTraining2 git:(ec518bf) ✗ 
+➜  GitTraining2 git:(ec518bf) ✗ git show ec518bf1a627bb626787d2fa03e5d9910e26d1c7
+➜  GitTraining2 git:(ec518bf) ✗ 
+➜  GitTraining2 git:(ec518bf) ✗ ls
+CommandLines1.tex Deolinda.txt      Links.tex         file1.txt         file2.txt         file3.txt
+➜  GitTraining2 git:(ec518bf) ✗ git status
+HEAD detached from 1f0dfc9
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   CommandLines1.tex
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  GitTraining2 git:(ec518bf) ✗ git add CommandLines1.tex 
+➜  GitTraining2 git:(ec518bf) ✗ git commit
+[detached HEAD 56895d3] Updates to command lines
+ 1 file changed, 85 insertions(+), 1 deletion(-)
+➜  GitTraining2 git:(56895d3) ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ google-chrome --allow-file-access-from-files index.html
+zsh: command not found: google-chrome
+➜  GitTraining2 git:(56895d3) ✗ open -a "Google Chrome" index.html --args --allow-file-access-from-files
+The file /Users/maylis/Documents/PosteMCF/Formation/GitTraining2/index.html does not exist.
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ cd article 
+➜  article git:(56895d3) ✗ open -a "Google Chrome" index.html --args --allow-file-access-from-files
+➜  article git:(56895d3) ✗ ls
+articles   css        index.html js
+➜  article git:(56895d3) ✗ cd ../
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ git log
+➜  GitTraining2 git:(56895d3) ✗ git status
+HEAD detached from 1f0dfc9
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	article/
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ cd article 
+➜  article git:(56895d3) ✗ ls
+articles   css        index.html js
+➜  article git:(56895d3) ✗ git status
+HEAD detached from 1f0dfc9
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  article git:(56895d3) ✗ cd ../
+➜  GitTraining2 git:(56895d3) ✗ ls
+CommandLines1.tex Links.tex         file1.txt         file3.txt
+Deolinda.txt      article           file2.txt
+➜  GitTraining2 git:(56895d3) ✗ cd article 
+➜  article git:(56895d3) ✗ ls
+articles   css        index.html js
+➜  article git:(56895d3) ✗ git add . 
+➜  article git:(56895d3) ✗ git status
+HEAD detached from 1f0dfc9
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   articles/example.md
+	new file:   css/style.css
+	new file:   index.html
+	new file:   js/jquery-3.3.1.min.js
+	new file:   js/markdown.js
+	new file:   js/showdown-figure.min.js
+	new file:   js/showdown-figure.min.js.map
+	new file:   js/showdown.min.js
+	new file:   js/showdown.min.js.map
+
+➜  article git:(56895d3) ✗ git commit
+[detached HEAD 72bc6ae] Article directory added
+ 9 files changed, 395 insertions(+)
+ create mode 100644 article/articles/example.md
+ create mode 100644 article/css/style.css
+ create mode 100644 article/index.html
+ create mode 100644 article/js/jquery-3.3.1.min.js
+ create mode 100644 article/js/markdown.js
+ create mode 100644 article/js/showdown-figure.min.js
+ create mode 100644 article/js/showdown-figure.min.js.map
+ create mode 100644 article/js/showdown.min.js
+ create mode 100755 article/js/showdown.min.js.map
+➜  article git:(72bc6ae) git status
+HEAD detached from 1f0dfc9
+nothing to commit, working tree clean
+➜  article git:(72bc6ae) git log
+➜  article git:(72bc6ae) ls
+articles   css        index.html js
+➜  article git:(72bc6ae) code CommandLines2.tex
+➜  article git:(72bc6ae) 
